@@ -72,7 +72,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Previous Posts" id="9SK-Kr-BLK">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="MxK-Ps-JTd">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="MxK-Ps-JTd">
                             <connections>
                                 <segue destination="mT7-L6-Jgh" kind="show" id="Ejx-JJ-MOi"/>
                             </connections>
@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="852" y="905"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Opp View Controller-->
         <scene sceneID="TYK-1R-OCV">
             <objects>
-                <viewController id="mT7-L6-Jgh" sceneMemberID="viewController">
+                <viewController id="mT7-L6-Jgh" customClass="AddOppViewController" customModule="VolunTEEN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="97t-rw-JD8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,11 +163,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7a-HU-icp">
+                                <rect key="frame" x="177" y="796" width="80" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="mT7-L6-Jgh" eventType="touchUpInside" id="fK8-VY-1F4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IjW-ao-XAQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="VLW-oK-koB"/>
+                    <connections>
+                        <outlet property="contactInformationInput" destination="Yzn-qg-FTN" id="tWu-WX-jOI"/>
+                        <outlet property="descriptionInput" destination="14z-Jq-AJ7" id="NTs-Wd-9hJ"/>
+                        <outlet property="jobTitleInput" destination="fWO-wa-VTh" id="Jwu-M8-llH"/>
+                        <outlet property="locationInput" destination="frr-Tt-t9y" id="Gef-R6-8Um"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CjJ-J9-gkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,4 +236,7 @@
             <point key="canvasLocation" x="-57.971014492753625" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>
